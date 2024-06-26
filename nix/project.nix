@@ -7,6 +7,7 @@ let
     src = ../.;
     compiler-nix-name = "ghc96";
     shell.withHoogle = false;
+    shell.inputsFrom = [ (pkgs.mkShell { buildInputs = [ inputs.poseidon-nix.defaultPackage.${system} ]; }) ];
     inputMap = {
       "https://chap.intersectmbo.org/" = inputs.iogx.inputs.CHaP;
     };

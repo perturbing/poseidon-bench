@@ -16,7 +16,7 @@ library poseidon-lib
   build-depends:     base >=4.2 && <5
   pkgconfig-depends: libblst
 
---  pkgconfig-depends: libblst, libposeidon
+-- pkgconfig-depends: libblst, libposeidon
 
 test-suite poseidon-test
   type:             exitcode-stdio-1.0
