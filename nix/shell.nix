@@ -6,6 +6,7 @@ cabalProject:
   name = "poseidon-bench";
 
   packages = lib.traceSeq inputs.CHaP [
+    inputs.poseidon-nix.defaultPackage.${system}
   ];
 
   preCommit = {
