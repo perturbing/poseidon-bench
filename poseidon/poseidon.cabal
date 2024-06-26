@@ -10,13 +10,14 @@ synopsis:
 build-type:    Simple
 
 library poseidon-lib
-  exposed-modules:   Test
+  exposed-modules:   Poseidon
   hs-source-dirs:    lib
   default-language:  Haskell2010
-  build-depends:     base >=4.2 && <5
-  pkgconfig-depends: libblst
+  build-depends:
+    , base >=4.2 && <5
+    , cardano-crypto-class >=2.1.5.0
 
--- pkgconfig-depends: libblst, libposeidon
+  pkgconfig-depends: libblst, libposeidon
 
 test-suite poseidon-test
   type:             exitcode-stdio-1.0

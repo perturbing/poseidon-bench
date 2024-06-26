@@ -39,6 +39,18 @@
     repoRoot = ./.;
     systems = [ "x86_64-linux" "x86_64-darwin" "aarch64-darwin" ];
     outputs = import ./nix/outputs.nix;
+    nixpkgsArgs.overlays = [
+      (
+        final: prev: {
+          libposeidon = inputs.poseidon-nix.defaultPackage.${final.system};
+          haskell-nix = prev.haskell-nix // {
+            extraPkgconfigMappings = prev.haskell-nix.extraPkgconfigMappings // {
+              "libposeidon" = [ "libposeidon" ];
+            };
+          };
+        }
+      )
+    ];
   };
 
   nixConfig = {

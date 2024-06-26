@@ -1061,11 +1061,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1719390854,
-        "narHash": "sha256-CfNMYnxWal0WtUrobH/Re9MKFTWKcKei/vVbJCUk1qQ=",
+        "lastModified": 1719406304,
+        "narHash": "sha256-wFcVvFprLJQZc9D4O4jTtups8p4tYaL/Cv7NfiuCGWA=",
         "owner": "perturbing",
         "repo": "poseidon",
-        "rev": "5b50a8e2ea8dd86527f2527119b06d65b6f16e9b",
+        "rev": "6c5e1bc5c2e34035c7bbaf6d95290a75a9a40bbe",
         "type": "github"
       },
       "original": {
